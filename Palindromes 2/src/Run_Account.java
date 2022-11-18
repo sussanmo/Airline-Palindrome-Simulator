@@ -1,9 +1,10 @@
+//Main class
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Run_Account {
-
-    protected static Scanner account = new Scanner(System.in);
+    
+    protected static Scanner account = new Scanner(System.in); //establishes user input class
 
     public static void main(String args[]) {
 
@@ -34,7 +35,7 @@ public class Run_Account {
         System.out.println("Please type in 1 to see your options.");
 
         int entry = account.nextInt();
-
+            //simulates menu options for user
             while (entry <= 5 && entry != 0) {
 
                 System.out.println("1: View Available Flights ");
@@ -44,7 +45,8 @@ public class Run_Account {
                 System.out.println("5: Quit");
                 System.out.println("How can BAC serve u today?");
                 System.out.println("Please select an option, 1-5");
-
+                
+                //ensures users input is a valid menu selection
                 try {
                     entry = account.nextInt();
                 } catch (InputMismatchException e) {
